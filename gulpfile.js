@@ -55,10 +55,10 @@ const imageTask = () => {
 
 //監視
 const watchTask = () => {
-  watch("./docs/**/*.html", series(htmlTask, browsersyncReload));
-  watch("./docs/img/**", series(imageTask, browsersyncReload));
-  watch("./docs/scss/**/*.scss", series(scssTask, browsersyncReload));
-  watch("./docs/js/**/*.js", series(jsTask, browsersyncReload));
+  watch("./src/**/*.html", series(htmlTask, browsersyncReload));
+  watch("./src/img/**", series(imageTask, browsersyncReload));
+  watch("./src/scss/**/*.scss", series(scssTask, browsersyncReload));
+  watch("./src/js/**/*.js", series(jsTask, browsersyncReload));
 };
 
 //browsersyncの開始
