@@ -11,46 +11,46 @@ const browsersync = require("browser-sync");
 
 //scssからcssに変換
 const scssTask = () => {
-  return src("./docs/scss/**/*.scss")
+  return src("./src/scss/**/*.scss")
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe(changed("./public/css"))
-    .pipe(dest("./public/css"));
+    .pipe(changed("./docs/css"))
+    .pipe(dest("./docs/css"));
 };
 
 //JSファイルの最適化
 const jsTask = () => {
-  return src("./docs/**/*.js")
+  return src("./src/js/**/*.js")
     .pipe(terser())
-    .pipe(changed("./public/js"))
-    .pipe(dest("./public/js"));
+    .pipe(changed("./docs/js"))
+    .pipe(dest("./docs/js"));
 };
 
 //htmlをpublicに書き出し
 const htmlTask = () => {
-  return src("./docs/**/*.html")
-    .pipe(changed("./public"))
-    .pipe(dest("./public"));
+  return src("./src/**/*.html")
+    .pipe(changed("./docs"))
+    .pipe(dest("./docs"));
 };
 
 //画像の圧縮
 //gulp-imagemin ^8.0.0だと動きません。
 const imageTask = () => {
-  return src("./docs/img/**")
-    .pipe(changed("./public/img"))
+  return src("./src/img/**")
+    .pipe(changed("./docs/img"))
     .pipe(
       imagemin([
-        imagemin.svgo(),
         pngquant({
           quality: [0.6, 0.7],
           speed: 1,
         }),
         mozjpeg({ quality: 65 }),
-        imagemin.optipng,
-        imagemin.gifsicle({ optimizationLevel: 3 }),
+        imagemin.svgo(),
+        imagemin.optipng(),
+        imagemin.gifsicle(),
       ])
     )
-    .pipe(dest("./public/img"));
+    .pipe(dest("./docs/img"));
 };
 
 //監視
@@ -65,7 +65,7 @@ const watchTask = () => {
 const browsersyncServe = (cb) => {
   browsersync.init({
     server: {
-      baseDir: "./public",
+      baseDir: "./docs",
     },
   });
   cb();
@@ -77,13 +77,6 @@ const browsersyncReload = (cb) => {
   cb();
 };
 
-exports.run = series(
-  htmlTask,
-  imageTask,
-  scssTask,
-  jsTask,
-  browsersyncServe,
-  watchTask
-);
+exports.run = series(htmlTask, imageTask, scssTask, jsTask, browsersyncServe, watchTask);
 
 exports.build = series(htmlTask, imageTask, scssTask, jsTask);

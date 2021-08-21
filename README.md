@@ -13,6 +13,9 @@ pull requestのMainBrunchに対するCodeQLが通されます。
 マージは絶対的なSquashMergeになります。
 ### 質問
 質問はDiscussion・Issueでお願いします。
+### 注意点
+- pushする前にかならず`gulp build`を走らせてください。
+- `./docs`はGulpから出力されたファイルが入ります。編集してもタスクを走らせた際、上書きされてしまうので注意してください。
 
 ## 実装
 ### フロントエンド
@@ -21,11 +24,11 @@ HTML JS Sass + Gulp
 `gulp`, `gulp-changed`, `gulp-imagemin`, `gulp-postcss`, `gulp-sass`, `gulp-terser`
 `browsersync`, `cssnano`, `imagemin-mozjpeg`, `imagemin-pngquant`, `postcss`, `sass`
 ### Gulpタスク
-`./public`へ書き出し + `browsersync`を使ったデバッグ
+`./docs`へ書き出し + `browsersync`を使ったデバッグ
 ```
 gulp run
 ```
-`./public`への書き出しのみ
+`./docs`への書き出しのみ
 ```
 gulp build
 ```
