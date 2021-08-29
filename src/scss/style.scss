@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 body {
     font-family: Roboto;
@@ -8,6 +9,9 @@ body {
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 header {
     color: #2f2f2f;
@@ -121,5 +125,74 @@ header {
             }
         }
     }
+}
+
+main {
+    margin-top: 160px;
+    padding: 0 140px;
+    color: #2f2f2f;
+    .about_us {
+        display: flex;
+        .text {
+
+            margin-right: -40%;
+
+            #title {
+                font-weight: bold;
+                font-size: 60px;
+            }
+            #desc {
+                font-family: 'Noto Sans JP', sans-serif;
+                font-weight: 700;
+                font-size: 36px;
+                margin-top: -60px;
+                max-width: 50%;
+            }
+        }
+        
+        .image {
+            display: block;
+            background-color: #8a8a8a;
+            width: 820px;
+            height: 420px;
+        }
+    }
+
+    .event {
+        margin-top: 160px;
+        display: flex;
+
+        .text {
+
+            margin-right: -40%;
+            margin-left: 70px;
+            #title {
+                font-weight: bold;
+                font-size: 60px;
+            }
+            #desc {
+                font-family: 'Noto Sans JP', sans-serif;
+                font-weight: 700;
+                font-size: 36px;
+                margin-top: -60px;
+                max-width: 55%;
+            }
+        }
+        
+        .image {
+            display: block;
+            background-color: #8a8a8a;
+            width: 820px;
+            height: 420px;
+        }
+
+
+    }
+}
+
+footer{
+    height: 140px;
+    margin-top: 180px;
+    background-color: #8a8a8a;
 }
 
