@@ -1,8 +1,125 @@
+@charset "utf-8";
+
 body {
     font-family: Roboto;
+    max-width: 1920px;
+//  background: #2f2f2f;
+    box-sizing: border-box;
+    margin: 0px;
 }
 
+
 header {
-    font-style: none;
+    color: #2f2f2f;
+    background: #fff;
+    position: fixed;
+    min-width: 100%;
+    z-index: 1000;
+    a {
+        color: #2f2f2f;
+        text-decoration: none;
+    }
+    .container {
+        margin: 0px;
+        padding: 0 100px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .header_logo {
+            display: block;
+            .logo {
+                fill: #fff;
+                height: 70px;
+                vertical-align: bottom;
+            }
+        }
+        
+        .header_nav {
+            font-weight: bold;
+            margin-left: auto;
+            
+            .list_nav {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                
+                li + li {
+                    margin-left: 40px;
+                }
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.top {
+    .header_img {
+        padding: 0px;
+        width: 100%;
+        height: 100vh;
+        background-image: url(/img/bg_top.gif);
+        background-position: center;
+        background-size: cover;
+        position: relative; 
+    }
+    .ttl{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        .text {
+            font-weight: bold;
+            font-size: 100px;
+            color: #fff;
+        }
+        .btn_sns{
+            position: absolute;
+            display: flex;
+            align-items: flex-start;
+            margin-top: -80px;
+            
+            a {                    
+                text-decoration: none;
+                color: #fff;
+            }
+            
+            a + a {
+                margin-left: 20px;
+            }
+            
+            #discord {
+                display: block;
+                text-align: center;
+                line-height: 80px;
+                width: 260px;
+                height: 80px;
+                font-weight: bold;
+                font-size: 28px;
+                background-color: #8140CC;
+                background-position: center;
+                border-radius: 50px;
+            }
+            
+            #twitter {
+                display: block;
+                line-height: 90px;
+                img {
+                    width: 30px;
+                    height: 25px;
+                }
+            }
+            #insta {
+                display: block;
+                line-height: 94px;
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
 }
 

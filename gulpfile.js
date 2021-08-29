@@ -47,7 +47,6 @@ const imageTask = () => {
         mozjpeg({ quality: 65 }),
         imagemin.svgo(),
         imagemin.optipng(),
-        imagemin.gifsicle(),
       ])
     )
     .pipe(dest("./docs/img"));
@@ -78,5 +77,5 @@ const browsersyncReload = (cb) => {
 };
 
 exports.run = series(htmlTask, imageTask, scssTask, jsTask, browsersyncServe, watchTask);
-
+exports.watch = series(htmlTask, imageTask, scssTask, jsTask, watchTask)
 exports.build = series(htmlTask, imageTask, scssTask, jsTask);
