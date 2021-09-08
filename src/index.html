@@ -4,88 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="js/index.js"></script>
-    <title>Document</title> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.png"/>
+    <script src="./js/index.js"></script>
+    <title>BFJ｜Battlefield Japan Community</title>
 </head>
 <body>
-    <!--Header---------------------------------------------->
-    <header class="header">
-        <div class="container">
-            <div class="header_logo">
-                <a href="#top">
-                    <img class="logo" src="/img/bfj_logo.svg">
-                </a>
+    <div class="site_container" id="site">
+        <!--Header---------------------------------------------->
+        <header class="header">
+            <div class="container">
+                <div class="header_logo">
+                    <a href="#top">
+                        <img class="logo" alt="BFJのロゴ" src="./img/bfj_logo.svg">
+                    </a>
+                </div>
+                <nav class="header_nav">
+                    <ul class="list_nav">
+                        <li>
+                            <a href="#top">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#about_us">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="#event">EVENT</a>
+                        </li>
+                        <li>
+                            <a href="#guide">GUIDE</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="header_nav">
-                <ul class="list_nav">
-                    <li>
-                        <a href="">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#about_us">ABOUT US</a>
-                    </li>
-                    <li>
-                        <a href="#event">EVENT</a>
-                    </li>
-                    <li>
-                        <a href="">JOIN</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!--Header END------------------------------------------>
-
-    <!--Top------------------------------------------------->
-    <section class="top" id="top"> 
-        <div class="header_img"></div>
-        <div class="ttl">
-            <div class="text">
-                <p>BATTLEFIELD</br>JAPAN</br>COMMUNITY</p>
-            </div>
-            <div class="btn_sns">
-                <a href="https://discord.com/invite/battlefield-jp" id="discord">JOIN DISCORD</a>
-                <a href="https://twitter.com/BFJ_GG" id="twitter">
-                    <img src="img/Icon-twitter.svg"></img>
-                </a>
-                <a href="https://www.instagram.com/bfj_community/" id="insta">
-                    <img src="img/Icon-instagram.svg"></img>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!--Top END------------------------------------------------->
-    
-    <main>
-        <section class="about_us" id="about_us">
-            <div class="text">
-                <p id="title">ABOUT US</p>
-                <p id="desc">
-                    日本のBFコミュニティをユーザー同士で盛り上げるために立ち上げました。ここにテキスト。
-                </p>
-            </div>
-            <div class="image">
-    
+        </header>
+        <!--Header END------------------------------------------>
+        <!--Top------------------------------------------------->
+        <section class="top" id="top"> 
+            <div class="header_img"></div>
+            <div class="ttl">
+                <div class="text animate">
+                    <p>BATTLEFIELD</br>JAPAN</br>COMMUNITY</p>
+                </div>
+                <div class="btn_sns animate">
+                    <a href="https://discord.com/invite/battlefield-jp" id="discord" class="btn_border">JOIN DISCORD</a>
+                    <div class="icons">
+                        <a href="https://twitter.com/BFJ_GG" id="twitter">
+                            <img src="./img/Icon-twitter.svg" alt="Twitterのアイコン"></img>
+                        </a>
+                        <a href="https://www.instagram.com/bfj_community/" id="insta">
+                            <img src="./img/Icon-instagram.svg" alt="Instagramのアイコン"></img>
+                        </a>
+                        <a href="https://github.com/BattleFieldJapanCommunity" id="github">
+                            <img src="./img/Icon-github.svg" alt="Githubのアイコン"></img>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCfGokvIO0lPYxSTwoXP9lCw" id="youtube">
+                            <img src="./img/Icon-youtube.svg" alt="Youtubeのアイコン"></img>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="event" id="event">
-            <div class="image">
-                
-            </div>
-            <div class="text">
-                <p id="title">EVENT</p>
-                <p id="desc">
-                    日本のBFコミュニティをユーザー同士で盛り上げるために立ち上げました。ここにテキスト。
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        
-    </footer>
+        <!--Top END-------------------------------------------->
+        <!--Main----------------------------------------------->
+        <main>
+            <section class="about_us" id="about_us">
+                <div class="container animate">
+                    <div class="ttl">
+                        <p>About us</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            日本のBFコミュニティをユーザー同士で盛り上げるために立ち上げました。</br>
+                            現在では、BFJ Cupなどの大会主催も行っています。
+                        </p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="animate-right" src="img/community.png" alt="コミュニティのイメージ">
+                </div>
+            </section>
+            <section class="event" id="event">
+                <div class="container animate-right">
+                    <div class="ttl">
+                        <p>Event</p>
+                    </div>
+                    <div class="desc">
+                        <p>イベントなどの重要なお知らせが見たい人はこちら</p>
+                        <a href="https://info.bfjcommunity.com/" class="btn_border">インフォメーションサイトへ</a>
+                    </div>
+                </div>
+            </section>
+            <section class="guide" id="guide">
+                <div class="container animate">
+                    <div class="ttl">
+                        <p>Guide</p>
+                    </div>
+                    <div class="desc">
+                        <p>コミュニティのルールや<br/>Botなどの使い方を知りたい人はこちら</p>
+                        <a class="go_guide btn_border" href="https://guide.bfjcommunity.com/">ユーザーガイドへ</a>
+                    </div>
+                </div>
+                <div class="image">
+                    <img class="animate-right" src="./img/guide.png" alt="ユーザーガイドのイメージ">
+                </div>
+            </section>
+        </main>
+        <!--Main END------------------------------------------------>
+        <footer class="footer">
+            <!--PlaceHolder--> 
+        </footer>
+    </div>
+    <script src="./js/behavior.js"></script>
 </body>
 </html>
 
