@@ -59,7 +59,7 @@ html {
   }
 }
 
-.site_container {
+#site {
   scroll-snap-type: y mandatory;
   scroll-snap-points-y: repeat(100vh);
   overflow-y: scroll;
@@ -73,7 +73,7 @@ html {
     height: 100vh;
   }
 
-  header {
+  .header {
     transition: 0.5s;
     color: #fff;
     background: rgba(0, 0, 0, 0);
@@ -86,7 +86,7 @@ html {
       color: #fff;
       text-decoration: none;
     }
-    .container {
+    &__container {
       margin: 0px;
       padding: 0 100px;
       height: 60px;
@@ -94,7 +94,7 @@ html {
       align-items: center;
       justify-content: space-between;
 
-      .header_logo {
+      &__logo {
         display: block;
         .logo {
           filter: invert(100%) brightness(200%);
@@ -103,7 +103,7 @@ html {
         }
       }
 
-      .header_nav {
+      &__nav {
         font-weight: bold;
         margin-left: auto;
 
@@ -131,8 +131,8 @@ html {
       color: #2f2f2f;
       text-decoration: none;
     }
-    .container {
-      .header_logo {
+    .header__container {
+      &__logo {
         .logo {
           filter: none;
         }
@@ -144,26 +144,26 @@ html {
     position: relative;
     overflow-y: hidden;
 
-    .header_img {
+    &__img {
+      position: relative;
       padding: 0px;
       width: 100%;
       height: 100vh;
       background-image: url(../img/bg_top.gif);
       background-position: center;
       background-size: cover;
-      position: relative;
     }
 
-    .ttl {
+    &__ttl {
       position: absolute;
       top: 30%;
       left: 10%;
-      .text {
+      &__text {
         font-weight: bold;
         font-size: 80px;
         color: #fff;
       }
-      .btn_sns {
+      &__btn_sns {
         position: relative;
         display: flex;
         align-items: flex-start;
@@ -230,7 +230,7 @@ html {
     color: var(--text-color);
     margin-top: 0px;
 
-    .about_us {
+    .aboutus {
       overflow-x: hidden;
       display: flex;
       text-align: left;
@@ -238,7 +238,7 @@ html {
       justify-content: center;
       background-color: var(--background-color);
 
-      .container {
+      &__container {
         margin-left: 10%;
         display: flex;
         align-items: flex-start;
@@ -249,13 +249,13 @@ html {
           margin-top: 20px;
         }
 
-        .ttl {
+        &__ttl {
           font-weight: bold;
           font-size: var(--text-title-size);
           text-transform: uppercase;
         }
 
-        .desc {
+        &__desc {
           max-width: 80%;
           line-height: 3rem;
           font-weight: 600;
@@ -264,7 +264,7 @@ html {
         }
       }
 
-      .image {
+      &__image {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -286,13 +286,13 @@ html {
       align-items: center;
       text-align: center;
 
-      .container {
-        .ttl {
+      &__container {
+        &__ttl {
           font-weight: bold;
           font-size: var(--text-title-size);
           text-transform: uppercase;
         }
-        .desc {
+        &__desc {
           display: flex;
           text-align: center;
           flex-direction: column;
@@ -327,19 +327,19 @@ html {
       justify-content: center;
       background-color: var(--background-color);
 
-      .container {
+      &__container {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
 
-        .ttl {
+        &__ttl {
           font-weight: bold;
           font-size: var(--text-title-size);
           text-transform: uppercase;
         }
 
-        .desc {
+        &__desc {
           justify-content: center;
 
           p {
@@ -366,7 +366,7 @@ html {
         }
       }
 
-      .image {
+      &__image {
         position: relative;
         display: flex;
         align-items: center;
@@ -388,35 +388,35 @@ html {
 }
 
 @media (max-width: 740px) {
-  .site_container {
-    header {
-      .container {
+  #site {
+    .header {
+      &__container {
         padding: 0 10%;
       }
 
-      .header_nav {
+      &__nav {
         display: none;
       }
     }
     .top {
-      .ttl {
-        .text {
+      &__ttl {
+        &__text {
           font-size: 45px;
         }
 
-        .btn_sns {
+        &__btn_sns {
           flex-direction: column;
         }
       }
     }
     main {
-      .about_us {
+      .aboutus {
         background-position: 30%;
 
-        .container {
+        &__container {
           align-items: center;
           margin-left: 0px;
-          .ttl {
+          &__ttl {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -426,33 +426,33 @@ html {
               text-align: center;
             }
           }
-          .desc {
+          &__desc {
             position: relative;
             max-width: 70%;
             text-align: center;
           }
         }
-        .image {
+        &__image {
           display: none;
         }
       }
 
       .guide {
-        .container {
+        &__container {
           align-items: center;
           .ttl {
             p {
               text-align: center;
             }
           }
-          .desc {
+          &__desc {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
           }
         }
-        .image {
+        &__image {
           display: none;
         }
       }
