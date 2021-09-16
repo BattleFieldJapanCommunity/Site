@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <!--SEO--------------------------------------------------->
     <meta name="keywords" content="Battlefield,Battlefield V,Battlefield 4,Battlefield 3,Battlefield 1.Battlefield 2042,Battlefield Mobile">
     <meta name="description" content="Battlefield Japan Community 通称 BFJ の公式サイトです。日本のBFコミュニティをユーザー同士で盛り上げるために立ち上げました。現在では、BFJ Cupなどの大会主催も行っています。">
@@ -28,14 +28,14 @@
 <body>
     <div class="site_container" id="site">
         <!--Header---------------------------------------------->
-        <header class="header">
-            <div class="container">
-                <div class="header_logo">
+        <header class="header" id="header">
+            <div class="header__container">
+                <div class="header__container__logo">
                     <a href="#top">
                         <img class="logo" alt="BFJのロゴ" src="./img/bfj_logo.svg">
                     </a>
                 </div>
-                <nav class="header_nav">
+                <nav class="header__container__nav">
                     <ul class="list_nav">
                         <li>
                             <a href="#top">HOME</a>
@@ -56,12 +56,10 @@
         <!--Header END------------------------------------------>
         <!--Top------------------------------------------------->
         <section class="top" id="top"> 
-            <div class="header_img"></div>
-            <div class="ttl">
-                <div class="text animate">
-                    <p>BATTLEFIELD</br>JAPAN</br>COMMUNITY</p>
-                </div>
-                <div class="btn_sns animate">
+            <div class="top__img"></div>
+            <div class="top__ttl">
+                <h1 class="top__ttl__text animate">BATTLEFIELD</br>JAPAN</br>COMMUNITY</h1>
+                <div class="top__ttl__btn_sns animate">
                     <a href="https://discord.com/invite/battlefield-jp" id="discord" class="btn_border">JOIN DISCORD</a>
                     <div class="icons">
                         <a href="https://twitter.com/BFJ_GG" id="twitter">
@@ -83,44 +81,42 @@
         <!--Top END-------------------------------------------->
         <!--Main----------------------------------------------->
         <main>
-            <section class="about_us" id="about_us">
-                <div class="container animate">
-                    <div class="ttl">
+            <section class="aboutus" id="about_us">
+                <div class="aboutus__container animate">
+                    <div class="aboutus__container__ttl">
                         <p>About us</p>
                     </div>
-                    <div class="desc">
+                    <div class="aboutus__container__desc">
                         <p>
                             日本のBFコミュニティをユーザー同士で盛り上げるために立ち上げました。</br>
                             現在では、BFJ Cupなどの大会主催も行っています。
                         </p>
                     </div>
                 </div>
-                <div class="image">
+                <div class="aboutus__image">
                     <img class="animate-right" src="img/community.png" alt="コミュニティのイメージ">
                 </div>
             </section>
             <section class="event" id="event">
-                <div class="container animate-right">
-                    <div class="ttl">
-                        <p>Event</p>
-                    </div>
-                    <div class="desc">
+                <div class="event__container animate-right">
+                    <p class="event__container__ttl">Event</p>
+                    <div class="event__container__desc">
                         <p>イベントなどの重要なお知らせ<br/>が見たい人はこちら</p>
                         <a href="https://info.bfjcommunity.com/" class="btn_border">インフォメーションサイトへ</a>
                     </div>
                 </div>
             </section>
             <section class="guide" id="guide">
-                <div class="container animate">
-                    <div class="ttl">
+                <div class="guide__container animate">
+                    <div class="guide__container__ttl">
                         <p>Guide</p>
                     </div>
-                    <div class="desc">
+                    <div class="guide__container__desc">
                         <p>コミュニティのルールや<br/>Botなどの使い方を知りたい人はこちら</p>
                         <a class="go_guide btn_border" href="https://guide.bfjcommunity.com/">ユーザーガイドへ</a>
                     </div>
                 </div>
-                <div class="image">
+                <div class="guide__image">
                     <img class="animate-right" src="./img/guide.png" alt="ユーザーガイドのイメージ">
                 </div>
             </section>

@@ -4,9 +4,10 @@ const scrollOffset = 0.6;
 
 //Animate when scroll//
 const animate = () => {
-  console.log('called')
+  console.log("called");
   animationTargets.forEach((target) => {
-    const dist = target.getBoundingClientRect().top + target.clientHeight * scrollOffset;
+    const dist =
+      target.getBoundingClientRect().top + target.clientHeight * scrollOffset;
 
     if (window.innerHeight > dist) {
       target.classList.add("shown");
@@ -17,7 +18,7 @@ const animate = () => {
 //Header color change//
 const headerAnimate = () => {
   const header = document.querySelector(".header");
-  const aboutus = document.querySelector(".about_us")
+  const aboutus = document.querySelector(".aboutus");
   const dist = aboutus.getBoundingClientRect().top;
 
   if (window.innerHeight <= dist) {
@@ -26,7 +27,7 @@ const headerAnimate = () => {
   if (window.innerHeight > dist) {
     header.classList.add("header_white");
   }
-}
+};
 
 headerAnimate();
 animate();
