@@ -40,13 +40,8 @@ const imageTask = () => {
     .pipe(changed("./docs/img"))
     .pipe(
       imagemin([
-        pngquant({
-          quality: [0.6, 0.7],
-          speed: 1,
-        }),
         mozjpeg({ quality: 65 }),
         imagemin.svgo(),
-        imagemin.optipng(),
       ])
     )
     .pipe(dest("./docs/img"));
