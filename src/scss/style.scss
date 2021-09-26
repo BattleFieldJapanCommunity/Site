@@ -257,7 +257,7 @@ html {
 
         &__desc {
           max-width: 80%;
-          line-height: 3rem;
+          line-height: 2rem;
           font-weight: 600;
           font-size: var(--text-desc-size);
           font-family: "Noto Sans JP" sans-serif;
@@ -326,6 +326,7 @@ html {
       align-items: center;
       justify-content: center;
       background-color: var(--background-color);
+      scroll-snap-align: center; 
 
       &__container {
         display: flex;
@@ -381,9 +382,24 @@ html {
     }
   }
 
-  footer {
-    height: 140px;
-    background-color: #8a8a8a;
+  .footer {
+
+    scroll-snap-align: center;
+    
+    &__container { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+
+      &__ttl {
+        font-weight: bold;
+        font-size: 60px;
+        color: var(--text-color);
+      }
+
+    }    
   }
 }
 
