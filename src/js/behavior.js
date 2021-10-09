@@ -9,6 +9,9 @@ const animate = () => {
     const dist =
       target.getBoundingClientRect().top + target.clientHeight * scrollOffset;
 
+    if (window.innerHeight <= dist) {
+      target.classList.remove("shown");
+    }
     if (window.innerHeight > dist) {
       target.classList.add("shown");
     }
