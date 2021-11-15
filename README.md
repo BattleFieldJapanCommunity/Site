@@ -15,7 +15,6 @@ pull requestのMainBrunchに対するCodeQLが通されます。
 質問はDiscussion・Issueでお願いします。
 ### 注意点
 - pushする前にかならず`gulp build`を走らせてください。
-- `./docs`はGulpから出力されたファイルが入ります。編集してもタスクを走らせた際、上書きされてしまうので注意してください。
 
 ## 実装
 ### フロントエンド

@@ -1,1 +1,41 @@
-const animationTargets=document.querySelectorAll(".animate, .animate-right"),site=document.querySelector(".site_container"),scrollOffset=.6,animate=()=>{console.log("called"),animationTargets.forEach((e=>{const t=e.getBoundingClientRect().top+.6*e.clientHeight;window.innerHeight<=t&&e.classList.remove("shown"),window.innerHeight>t&&e.classList.add("shown")}))},headerAnimate=()=>{const e=document.querySelector(".header"),t=document.querySelector(".aboutus").getBoundingClientRect().top;window.innerHeight<=t&&e.classList.remove("header_white"),window.innerHeight>t&&e.classList.add("header_white")};headerAnimate(),animate(),site.addEventListener("scroll",(()=>{headerAnimate(),animate()}));
+const animationTargets = document.querySelectorAll(".animate, .animate-right");
+const site = document.querySelector(".site_container");
+const scrollOffset = 0.6;
+
+//Animate when scroll//
+const animate = () => {
+  console.log("called");
+  animationTargets.forEach((target) => {
+    const dist =
+      target.getBoundingClientRect().top + target.clientHeight * scrollOffset;
+
+    if (window.innerHeight <= dist) {
+      target.classList.remove("shown");
+    }
+    if (window.innerHeight > dist) {
+      target.classList.add("shown");
+    }
+  });
+};
+
+//Header color change//
+const headerAnimate = () => {
+  const header = document.querySelector(".header");
+  const aboutus = document.querySelector(".aboutus");
+  const dist = aboutus.getBoundingClientRect().top;
+
+  if (window.innerHeight <= dist) {
+    header.classList.remove("header_white");
+  }
+  if (window.innerHeight > dist) {
+    header.classList.add("header_white");
+  }
+};
+
+headerAnimate();
+animate();
+
+site.addEventListener("scroll", () => {
+  headerAnimate();
+  animate();
+});
