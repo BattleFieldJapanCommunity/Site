@@ -35,6 +35,10 @@ const headerAnimate = () => {
 headerAnimate();
 animate();
 
+var scoll = new SmoothScroll("body", {
+  speed: 500,
+});
+
 site.addEventListener("scroll", () => {
   headerAnimate();
   animate();

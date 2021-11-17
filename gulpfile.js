@@ -22,8 +22,8 @@ const scssTask = () => {
 const jsTask = () => {
   return src("./docs/js/**/*.js")
     .pipe(terser())
-    .pipe(changed("./docs/min/js"))
-    .pipe(dest("./docs/min/js"));
+    .pipe(changed("./docs/js/"))
+    .pipe(dest("./docs/js/min/"));
 };
 
 //監視

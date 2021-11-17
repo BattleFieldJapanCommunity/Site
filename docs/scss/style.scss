@@ -64,8 +64,8 @@ html {
 }
 
 #site {
-  scroll-snap-type: y mandatory;
-  scroll-snap-points-y: repeat(100vh);
+  //scroll-snap-type: y mandatory;
+  //scroll-snap-points-y: repeat(100vh);
   overflow-y: scroll;
   scroll-behavior: smooth;
   height: 100vh;
@@ -73,7 +73,7 @@ html {
   scrollbar-color: #2f2f2f;
 
   section {
-    scroll-snap-align: center;
+  //  scroll-snap-align: center;
     height: 100vh;
   }
 
