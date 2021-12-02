@@ -22,8 +22,8 @@ const scssTask = () => {
 const jsTask = () => {
   return src("./docs/js/**/*.js")
     .pipe(terser())
-    .pipe(changed("./docs/min/js"))
-    .pipe(dest("./docs/min/js"));
+    .pipe(changed("./docs/js/"))
+    .pipe(dest("./docs/js/min/"));
 };
 
 //監視
@@ -31,6 +31,10 @@ const watchTask = () => {
   watch("./docs/scss/**/*.scss", series(scssTask, browsersyncReload));
   watch("./docs/js/**/*.js", series(jsTask, browsersyncReload));
 };
+
+const watchJSTask = () => {
+  watch("./docs/js/**/*.js", series(jsTask));
+}
 
 //browsersyncの開始
 const browsersyncServe = (cb) => {
@@ -50,4 +54,5 @@ const browsersyncReload = (cb) => {
 
 exports.run = series(scssTask, jsTask, browsersyncServe, watchTask);
 exports.watch = series(scssTask, jsTask, watchTask)
+exports.watchJS = series(jsTask, watchJSTask)
 exports.build = series(scssTask, jsTask);
