@@ -32,6 +32,10 @@ const watchTask = () => {
   watch("./docs/js/**/*.js", series(jsTask, browsersyncReload));
 };
 
+const watchJSTask = () => {
+  watch("./docs/js/**/*.js", series(jsTask));
+}
+
 //browsersyncの開始
 const browsersyncServe = (cb) => {
   browsersync.init({
@@ -50,4 +54,5 @@ const browsersyncReload = (cb) => {
 
 exports.run = series(scssTask, jsTask, browsersyncServe, watchTask);
 exports.watch = series(scssTask, jsTask, watchTask)
+exports.watchJS = series(jsTask, watchJSTask)
 exports.build = series(scssTask, jsTask);

@@ -1,6 +1,26 @@
+//Fpr Animation
 const animationTargets = document.querySelectorAll(".animate, .animate-right");
 const site = document.querySelector(".site_container");
 const scrollOffset = 0.6;
+
+//Fot hamburger Manu
+const header = document.querySelector("#header")
+const hamburger = document.querySelector(".nav_hamburger");
+const navigationMenu = document.querySelector(".nav_list");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navigationMenu.classList.toggle("active");
+  header.classList.toggle("active");
+})
+
+navigationMenu.addEventListener("click", () => {
+  if (navigationMenu.classList.contains("active")) {
+    hamburger.classList.toggle("active");
+    navigationMenu.classList.toggle("active");
+    header.classList.toggle("active");
+  }
+})
 
 //Animate when scroll//
 const animate = () => {
