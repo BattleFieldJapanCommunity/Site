@@ -74,7 +74,7 @@ html {
   scrollbar-color: #2f2f2f;
 
   section {
-    //  scroll-snap-align: center;
+    scroll-snap-align: center;
     height: 100vh;
   }
 
@@ -124,7 +124,6 @@ html {
             text-decoration: none;
           }
         }
-
         .nav_hamburger{
           display: none;
           cursor: pointer;
@@ -448,7 +447,6 @@ html {
               line-height: 90px;
               height: 30px;
             }
-
             .logo_alt {
               height: 25px;
             }
