@@ -4,8 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 
 body {
-  font-family: Roboto;
-  //max-width: 1920px;
   box-sizing: border-box;
   margin: 0;
   font-family: Roboto;
@@ -94,15 +92,12 @@ html {
     }
 
     &__container {
-      margin: 0px;
-      padding: 0 100px;
-      height: var(--header-size);
       display: flex;
-      align-items: center;
-      justify-content: space-between;
       height: var(--header-size);
       padding: 0 100px;
-      margin: 0;
+      align-items: center;
+      margin: 0px;
+      justify-content: space-between;
 
       &__logo {
         display: block;
@@ -122,7 +117,6 @@ html {
           list-style: none;
           display: flex;
           align-items: center;
-          list-style: none;
 
           li + li {
             margin-left: 40px;
@@ -132,7 +126,8 @@ html {
             text-decoration: none;
           }
         }
-        .nav_hamburger{
+
+        .nav_hamburger {
           display: none;
           cursor: pointer;
 
@@ -159,6 +154,7 @@ html {
           filter: none;
         }
       }
+
       &__nav {
         .nav_hamburger {
           .bar {
@@ -462,6 +458,7 @@ html {
               height: 30px;
               line-height: 90px;
             }
+
             .logo_alt {
               height: 25px;
             }

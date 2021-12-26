@@ -12,6 +12,8 @@ module.exports = {
     "selector-class-pattern": false,
     "font-family-no-missing-generic-family-keyword": false,
     "no-descending-specificity": false,
+    "order/properties-order": false,
+    "length-zero-no-unit": false,
     "selector-type-no-unknown": { ignore: ["ui"] },
   },
   ignoreFiles: [
